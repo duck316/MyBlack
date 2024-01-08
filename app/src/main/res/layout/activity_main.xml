@@ -5,45 +5,66 @@
     android:id="@+id/mainscreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E11B1B"
     tools:context=".MainActivity">
 
 
     <ImageView
         android:id="@+id/LogCompany"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="@id/mainscreen"
         app:layout_constraintStart_toStartOf="@+id/mainscreen"
         app:layout_constraintTop_toTopOf="@+id/mainscreen" />
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/mainscreen"
         app:layout_constraintStart_toStartOf="@+id/mainscreen"
+        app:layout_constraintBottom_toTopOf="@id/rvCategories"
         app:layout_constraintTop_toBottomOf="@+id/LogCompany">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="@string/carbrand"
             android:textAllCaps="true"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:gravity="center_horizontal" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="@string/caryear"
             android:textAllCaps="true"
             android:textColor="@color/design_default_color_error"
             android:textSize="40sp"
-            android:gravity="center_horizontal"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botonera"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/mainscreen"
+        app:layout_constraintEnd_toEndOf="@id/mainscreen"
+        app:layout_constraintStart_toStartOf="@id/mainscreen" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/mainscreen">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
