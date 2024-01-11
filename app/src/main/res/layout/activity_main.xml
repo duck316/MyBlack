@@ -29,24 +29,10 @@
         app:layout_constraintBottom_toTopOf="@id/rvCategories"
         app:layout_constraintTop_toBottomOf="@+id/LogCompany">
 
-        <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvContent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="@string/carbrand"
-            android:textAllCaps="true"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="@string/caryear"
-            android:textAllCaps="true"
-            android:textColor="@color/design_default_color_error"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
     <LinearLayout
